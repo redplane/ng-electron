@@ -1,0 +1,23 @@
+<nav class="side-navbar shrink" ng-init="ngOnInit()">
+    <div class="side-navbar-wrapper">
+        <!-- Sidebar Header    -->
+        <div class="sidenav-header d-flex align-items-center justify-content-center">
+            <!-- User Info-->
+            <div class="sidenav-header-inner text-center">
+                <h2 class="h5">App title</h2>
+            </div>
+            <!-- Small Brand information, appears on minimized sidebar-->
+            <div class="sidenav-header-logo">
+                <a href class="brand-small text-center">
+                    <strong>A</strong><strong class="text-primary">T</strong>
+                </a></div>
+        </div>
+        <!-- Sidebar Navigation Menus-->
+        <div class="main-menu">
+            <ul class="side-menu list-unstyled">
+                <li ui-sref-active="active" ui-sref="{{urlStatesConstant.dashboard.name}}"><a href> <i
+                        class="fa fa-home"></i>Dashboard </a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

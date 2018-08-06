@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="ngApp"
+      ng-controller="appController"
+      ng-init="ngOnInit()"
+      ng-jq="jQuery">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title translate="TITLE_APPLICATION"></title>
+</head>
+<body>
+<ui-view></ui-view>
+
+<div id="loader-wrapper"
+     block-ui="uiBlocker">
+    <div id="loader"></div>
+</div>
+
+</body>
+</html>
+
+<script>
+    if ('true' !== '<%= IS_PRODUCTION %>'){
+        const electronConnect = require('electron-connect');
+        electronConnect.client.create();
+        console.log(electronConnect);
+    }
+</script>

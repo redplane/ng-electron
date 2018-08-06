@@ -1,0 +1,47 @@
+//colors
+$color_karry_approx: #ffe4d1;
+$web_orange: orange;
+$color_mine_shaft_approx: #333;
+
+.flat-slider.rzslider {
+  .rz-bar {
+    background: $color_karry_approx;
+    height: 2px;
+  }
+  .rz-selection {
+    background: $web_orange;
+  }
+  .rz-pointer {
+    width: 8px;
+    height: 16px;
+    top: auto;
+    bottom: 0;
+    background-color: $color_mine_shaft_approx;
+    //Instead of the line below you could use @include border-top-left-radius($radius)
+    border-top-left-radius: 3px;
+    //Instead of the line below you could use @include border-top-right-radius($radius)
+    border-top-right-radius: 3px;
+    &:after {
+      display: none;
+    }
+  }
+  .rz-bubble {
+    bottom: 14px;
+  }
+  .rz-limit {
+    font-weight: bold;
+    color: $web_orange;
+  }
+  .rz-tick {
+    width: 1px;
+    height: 10px;
+    margin-left: 4px;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    background: $color_karry_approx;
+    top: -1px;
+    &.rz-selected {
+      background: $web_orange;
+    }
+  }
+}
